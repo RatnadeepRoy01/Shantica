@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* <!-- Footer Top --> */}
           <div className="py-20 lg:py-25">
-            <div className="flex flex-wrap gap-8 lg:justify-between lg:gap-0">
+            <div className="flex flex-wrap gap-8 lg:justify-between lg:gap-0 md:ml-0 2xl:ml-0 ml-4">
               <motion.div
                 variants={{
                   hidden: {
@@ -46,7 +46,7 @@ const Footer = () => {
                 </a>
 
                 <p className="mb-10 mt-5">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Upskilling is the key to staying competitive, adaptable, and future-ready in a rapidly evolving world.
                 </p>
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
@@ -60,7 +60,7 @@ const Footer = () => {
                 </a>
               </motion.div>
 
-              <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12">
+              <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12 ">
                 <motion.div
                   variants={{
                     hidden: {
