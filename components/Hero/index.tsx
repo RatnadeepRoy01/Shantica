@@ -69,14 +69,14 @@ const Hero = () => {
                
                   <Image
                     className="dark:hidden"
-                    src="/images/hero/Hero.webp"
+                    src="/images/hero/Hero.png"
                     alt="Hero"
                     width={1000}
                     height={1000}
                   />
                   <Image
                     className="hidden  dark:block"
-                    src="/images/hero/Hero.webp"
+                    src="/images/hero/Hero.png"
                     alt="Hero"
                     width={1000}
                     height={1000}
