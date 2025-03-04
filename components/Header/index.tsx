@@ -155,14 +155,14 @@ const Header = () => {
             <ThemeToggler />
 
             <Link
-              href="http://localhost:3000/auth/signin"
+              href="/auth/signin"
               className="text-regular font-medium text-waterloo dark:text-white "
             >
               Sign in 🌟
             </Link>
 
             <Link
-              href="http://localhost:3000/auth/signup"
+              href="/auth/signup"
               className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
             >
               Sign up 🔥
