@@ -3,11 +3,12 @@ import BlogItem from "@/components/Blog/BlogItem";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Page - Solid SaaS Boilerplate",
+  title: "Shantica Blog - Insights & Inspiration",
 
   // other metadata
-  description: "This is Blog page for Solid Pro"
+  description: "Explore expert insights, leadership tips, and growth strategies on the Shantica Blog.",
 };
+
 
 const BlogPage = async () => {
   return (

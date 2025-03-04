@@ -3,12 +3,39 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const Signin = () => {
   const [data, setData] = useState({
     email: "",
     password: "",
   });
+
+  const Router = useRouter();
+
+  function submitData (e: React.FormEvent) {
+     e.preventDefault()
+    const url = '/api/signToken';   
+    fetch(url, {
+      method: 'POST', 
+      headers: {
+        'Content-Type': 'application/json', 
+      },
+      body: JSON.stringify(data), 
+    })
+      .then((response) => response.json()) 
+      .then((data) => {
+        console.log(data)
+        if(data.message == "Logged in successfully"){
+             Router.push("/")
+        }else{
+          alert("invalid credentials")
+        }
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+  }
 
   return (
     <>
@@ -185,6 +212,7 @@ const Signin = () => {
                 <button
                   aria-label="login with email and password"
                   className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
+                  onClick={submitData}
                 >
                   Log in
                   <svg

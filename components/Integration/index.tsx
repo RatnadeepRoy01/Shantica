@@ -10,12 +10,13 @@ const Integration = () => {
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* <!-- Section Title Start --> */}
           <SectionHeader
-            headerInfo={{
-              title: `INTEGRATIONS`,
-              subtitle: `Remotely Maintain Your Data, From Anywhere, Anytime.`,
-              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
-            }}
-          />
+  headerInfo={{
+    title: `FOLLOW US`,
+    subtitle: `Stay Connected with Shantica Across All Platforms.`,
+    description: `Join our community and keep up with the latest updates, insights, and events. Follow us on social media and be part of the journey.`,
+  }}
+/>
+
 
           {/* <!-- Section Title End --> */}
         </div>

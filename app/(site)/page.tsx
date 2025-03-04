@@ -14,11 +14,10 @@ import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
 
 export const metadata: Metadata = {
-  title: "Next.js Starter Template for SaaS Startups - Solid SaaS Boilerplate",
-
-  // other metadata
-  description: "This is Home for Solid Pro"
+  title: "Shantica - Empowering Growth & Leadership", 
+  description: "Join Shantica to elevate your skills, enhance leadership, and unlock new opportunities.",
 };
+
 
 export default function Home() {
   return (
@@ -33,7 +32,7 @@ export default function Home() {
       <CTA />
       <FAQ />
       <Testimonial />
-      <Pricing />
+      {/* <Pricing /> */}
       <Contact />
       <Blog />
     </main>

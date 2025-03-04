@@ -3,11 +3,12 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Support Page - Solid SaaS Boilerplate",
+  title: "Shantica Support - We're Here to Help",
 
   // other metadata
-  description: "This is Support page for Solid Pro"
+  description: "Need assistance? Explore our support resources or contact our team for help with Shantica services.",
 };
+
 
 const SupportPage = () => {
   return (

@@ -32,9 +32,7 @@ const CTA = () => {
                 Join With Us Today & Increase Your Productivity
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor eros. Donec vitae tortor lacus. Phasellus
-                aliquam ante in maximus.
+              Empower yourself with the right tools and guidance. Be a part of Shantica and take your productivity to new heights.
               </p>
             </motion.div>
             <motion.div
