@@ -1,26 +1,34 @@
 "use client";
 import React from "react";
 import featuresData from "./featuresData";
+import valuesData from "./featuresAboutData";
 import SingleFeature from "./SingleFeature";
 import SectionHeader from "../Common/SectionHeader";
 
-const Feature = () => {
+type FeatureVariant = "hero" | "about";
+
+interface FeatureProps {
+  variant?: FeatureVariant;
+}
+
+const Feature = ({ variant = "hero" }: FeatureProps) => {
+  const filterData = variant == "hero" ? featuresData : valuesData;
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
       <section id="features" className="py-20 lg:py-25 xl:py-30">
         <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
           {/* <!-- Section Title Start --> */}
-          
+
           <SectionHeader
-  headerInfo={{
-    title: "SHANTICA LEADERSHIP ACADEMY",
-    subtitle: "Empowering Future Leaders",
-    description: `Shantica Leadership Academy is dedicated to upskilling individuals with essential 
+            headerInfo={{
+              title: "SHANTICA LEADERSHIP ACADEMY",
+              subtitle: "Empowering Future Leaders",
+              description: `Shantica Leadership Academy is dedicated to upskilling individuals with essential 
     professional skills, leadership training, and career guidance to bridge the gap between education 
     and industry expectations.`,
-  }}
-/>
+            }}
+          />
 
 
           {/* <!-- Section Title End --> */}
@@ -28,7 +36,7 @@ const Feature = () => {
           <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
             {/* <!-- Features item Start --> */}
 
-            {featuresData.map((feature, key) => (
+            {filterData.map((feature, key) => (
               <SingleFeature feature={feature} key={key} />
             ))}
             {/* <!-- Features item End --> */}

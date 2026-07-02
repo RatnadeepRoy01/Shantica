@@ -3,7 +3,7 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <div className="animate_left relative hidden gap-8 md:flex md:w-full h-screen">
-     
+
       <div className="flex flex-col justify-center items-center w-1/2 h-full">
         <Image
           alt="Shape"
@@ -26,8 +26,8 @@ const HeroSection = () => {
           src="/images/about/about-02.webp"
         />
       </div>
-         
-        <div className="flex flex-col justify-center w-1/2 h-full">
+
+      <div className="flex flex-col justify-center w-1/2 h-full">
 
         <Image
           alt="Shape"

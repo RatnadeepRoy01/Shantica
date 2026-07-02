@@ -3,18 +3,18 @@ import { FAQ } from "@/types/faq";
 const faqData: FAQ[] = [
   {
     id: 1,
-    quest: "What is Shantica Leadership Academy?",
-    ans: "Shantica Leadership Academy is a platform designed to empower individuals with leadership skills, personal growth, and professional development through expert guidance and structured programs.",
+    quest: "Who is the 3-Month Flagship Program designed for?",
+    ans: "It is built for college students, fresh graduates, and young professionals in Northeast India who want to build confidence, leadership skills, and gain career direction. It is especially crafted for those from Tier-2 and Tier-3 towns who lack access to metro-city career mentorship.",
   },
   {
     id: 2,
-    quest: "Who can join Shantica Leadership Academy?",
-    ans: "Our programs are open to students, professionals, and anyone looking to enhance their leadership abilities, confidence, and career prospects.",
+    quest: "How does the global mentorship program work?",
+    ans: "Our network features 100+ volunteer mentors (including HR leaders, scientists, data analysts, and engineering alumni from companies in Amsterdam, Dubai, Bangalore, etc.). Enrolled students are matched with a dedicated mentor who checks in weekly to guide their career and interview preparation.",
   },
   {
     id: 3,
-    quest: "How does Shantica help in career growth?",
-    ans: "We provide mentorship, skill development, and real-world training to help individuals become effective leaders and excel in their careers.",
+    quest: "What practical, hands-on learning experiences do students get?",
+    ans: "We focus on experience-first learning. Students participate in public speaking through the Power Speakers Club, host live events, join street plays, perform sales challenges, and practice corporate skills like email writing, resume building, and mock interviews.",
   },
 ];
 

@@ -24,15 +24,15 @@ const CTA = () => {
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               viewport={{ once: true }}
               className="animate_left md:w-[70%] lg:w-1/2"
             >
-              <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
-                Join With Us Today & Increase Your Productivity
+              <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4 leading-tight">
+                Ready to discover what you are capable of becoming?
               </h2>
-              <p>
-              Empower yourself with the right tools and guidance. Be a part of Shantica and take your productivity to new heights.
+              <p className="text-waterloo dark:text-manatee">
+                Join a supportive community where potential is valued, confidence is rebuilt, and global leaders guide your career journey.
               </p>
             </motion.div>
             <motion.div
@@ -49,7 +49,7 @@ const CTA = () => {
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               viewport={{ once: true }}
               className="animate_right lg:w-[45%]"
             >
@@ -62,10 +62,10 @@ const CTA = () => {
                   className="hidden xl:block"
                 />
                 <a
-                  href="/auth/signup"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black"
+                  href="/contact"
+                  className="inline-flex items-center gap-2.5 rounded-full bg-black px-8 py-3.5 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black transition-all"
                 >
-                  Sign up free
+                  Get Started Now
                   <Image
                     width={20}
                     height={20}

@@ -45,20 +45,14 @@ const Footer = () => {
                   />
                 </a>
 
-                <p className="mb-10 mt-5">
-                Upskilling is the key to staying competitive, adaptable, and future-ready in a rapidly evolving world.
+                <p className="mb-8 mt-5 text-sm leading-relaxed">
+                  Bridging the gap between education, confidence, and employability in Northeast India.
                 </p>
 
-                <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
-                  contact
-                </p>
-                <a
-                  href="#"
-                  className="text-itemtitle font-medium text-black dark:text-white"
-                >
-                  hello@solid.com
-                </a>
+
+
               </motion.div>
+
 
               <div className="flex w-full flex-col gap-8 md:flex-row md:justify-between md:gap-0 lg:w-2/3 xl:w-7/12 ">
                 <motion.div
@@ -86,7 +80,7 @@ const Footer = () => {
                   <ul>
                     <li>
                       <a
-                        href="#"
+                        href="/"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Home
@@ -94,26 +88,10 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/about"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Product
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Careers
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Pricing
+                        About Us
                       </a>
                     </li>
                   </ul>
@@ -138,37 +116,21 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
-                    Support
+                    Resources
                   </h4>
 
                   <ul>
                     <li>
                       <a
-                        href="#"
+                        href="/stories"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Company
+                        Success Stories
                       </a>
                     </li>
                     <li>
                       <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Press media
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Our Blog
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="#"
+                        href="/contact"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Contact Us
@@ -198,8 +160,8 @@ const Footer = () => {
                   <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
                     Newsletter
                   </h4>
-                  <p className="mb-4 w-[90%]">
-                    Subscribe to receive future updates
+                  <p className="mb-4 w-[90%] text-sm">
+                    Subscribe to receive updates about new cohorts and community initiatives.
                   </p>
 
                   <form action="#">
@@ -301,7 +263,7 @@ const Footer = () => {
               className="animate_top"
             >
               <p>
-                &copy; {new Date().getFullYear()} Solid. All rights reserved
+                &copy; {new Date().getFullYear()} Shantica Leadership Academy. All rights reserved
               </p>
             </motion.div>
 
@@ -325,7 +287,7 @@ const Footer = () => {
             >
               <ul className="flex items-center gap-5">
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <a href="https://www.facebook.com/share/18sYKnUJoA/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"
@@ -349,7 +311,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <a href="https://www.instagram.com/shantica_org?igsh=eTgyYXE1bm44cTds" target="_blank" rel="noopener noreferrer" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"
@@ -373,7 +335,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <a href="https://www.linkedin.com/company/shantica-leadership-academy/" target="_blank" rel="noopener noreferrer" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"
@@ -397,7 +359,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <a href="https://youtube.com/@shanticatraininginstitute1098?si=DYwZuzQy3erxuIAB" target="_blank" rel="noopener noreferrer" aria-label="social icon">
                     <svg
                       className="fill-[#D1D8E0] transition-all duration-300 hover:fill-primary"
                       width="24"

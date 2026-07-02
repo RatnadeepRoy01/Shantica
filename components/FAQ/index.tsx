@@ -46,7 +46,7 @@ const FAQ = () => {
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               viewport={{ once: true }}
               className="animate_left md:w-2/5 lg:w-1/2"
             >
@@ -93,7 +93,7 @@ const FAQ = () => {
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               viewport={{ once: true }}
               className="animate_right md:w-3/5 lg:w-1/2"
             >

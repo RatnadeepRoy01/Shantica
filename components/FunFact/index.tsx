@@ -51,7 +51,7 @@ const FunFact = () => {
             }}
             initial="hidden"
             whileInView="visible"
-            transition={{ duration: 1, delay: 0.1 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
             viewport={{ once: true }}
             className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2"
           >
@@ -65,7 +65,7 @@ const FunFact = () => {
             </p>
           </motion.div>
 
-          <div className="flex flex-wrap justify-center gap-8 lg:gap-42.5">
+          <div className="flex flex-wrap justify-center gap-8 lg:gap-20 xl:gap-30">
             <motion.div
               variants={{
                 hidden: {
@@ -80,14 +80,14 @@ const FunFact = () => {
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.5 }}
+              transition={{ duration: 0.4, delay: 0.5 }}
               viewport={{ once: true }}
               className="animate_top text-center"
             >
               <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                4000+
+                10,000+
               </h3>
-              <p className="text-lg lg:text-para2">Learners Trained</p>
+              <p className="text-lg font-medium text-waterloo dark:text-manatee">Youth Impacted</p>
             </motion.div>
             <motion.div
               variants={{
@@ -103,14 +103,37 @@ const FunFact = () => {
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.7 }}
+              transition={{ duration: 0.4, delay: 0.7 }}
+              viewport={{ once: true }}
+              className="animate_top text-center"
+            >
+              <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
+                120
+              </h3>
+              <p className="text-lg font-medium text-waterloo dark:text-manatee">Global Mentors</p>
+            </motion.div>
+            <motion.div
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: -20,
+                },
+
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.4, delay: 0.8 }}
               viewport={{ once: true }}
               className="animate_top text-center"
             >
               <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
                 200+
               </h3>
-              <p className="text-lg lg:text-para2">Industry Experts</p>
+              <p className="text-lg font-medium text-waterloo dark:text-manatee">Workshops Delivered</p>
             </motion.div>
             <motion.div
               variants={{
@@ -126,14 +149,14 @@ const FunFact = () => {
               }}
               initial="hidden"
               whileInView="visible"
-              transition={{ duration: 1, delay: 0.8 }}
+              transition={{ duration: 0.4, delay: 0.9 }}
               viewport={{ once: true }}
               className="animate_top text-center"
             >
               <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                95%
+                100+
               </h3>
-              <p className="text-lg lg:text-para2">Career Success Rate</p>
+              <p className="text-lg font-medium text-waterloo dark:text-manatee">Career Placements</p>
             </motion.div>
           </div>
         </div>
