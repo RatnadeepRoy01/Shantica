@@ -95,7 +95,7 @@ const FAQ = () => {
               whileInView="visible"
               transition={{ duration: 0.4, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_right md:w-3/5 lg:w-1/2"
+              className="animate_right w-full md:w-3/5 lg:w-1/2"
             >
               <div className="rounded-lg bg-white shadow-solid-8 dark:border dark:border-strokedark dark:bg-blacksection">
                 {faqData.map((faq, key) => (

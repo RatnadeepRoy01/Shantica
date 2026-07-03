@@ -5,7 +5,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
+      <section className="overflow-hidden pb-20 pt-24 md:pt-40 xl:pb-25 xl:pt-46">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
@@ -27,10 +27,10 @@ const Hero = () => {
               <div className="mt-10">
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="/programs"
+                    href="/about"
                     className="flex items-center justify-center rounded-full bg-primary px-8 py-3 text-regular font-medium text-white duration-300 ease-in-out hover:bg-primaryho"
                   >
-                    Explore Programs
+                    About us
                   </a>
                   <a
                     href="/contact"

@@ -94,7 +94,7 @@ const About = ({ variant = "hero" }: AboutProps) => {
       {/* ===== Section One ===== */}
       <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
         <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <div className="flex items-center gap-8 lg:gap-32.5">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-32.5">
 
             {/* Left — image */}
             <motion.div
@@ -135,13 +135,13 @@ const About = ({ variant = "hero" }: AboutProps) => {
               <p>{sectionOne.paragraph}</p>
 
               {sectionOne.items.map((item) => (
-                <div key={item.number} className="mt-7.5 flex items-center gap-5">
+                <div key={item.number} className="mt-7.5 flex flex-col gap-4 sm:flex-row sm:items-center">
                   <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
                     <p className="text-metatitle2 font-semibold text-black dark:text-white">
                       {item.number}
                     </p>
                   </div>
-                  <div className="w-3/4">
+                  <div className="w-full sm:w-3/4">
                     <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
                       {item.title}
                     </h3>
@@ -158,7 +158,7 @@ const About = ({ variant = "hero" }: AboutProps) => {
       {/* ===== Section Two ===== */}
       <section>
         <div className="mx-auto max-w-c-1235 overflow-hidden px-4 md:px-8 2xl:px-0">
-          <div className="flex items-center gap-8 lg:gap-32.5">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-32.5">
 
             {/* Left — text */}
             <motion.div

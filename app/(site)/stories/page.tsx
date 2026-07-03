@@ -105,7 +105,16 @@ const SuccessStoriesPage = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {impactStats.map((stat, idx) => (
               <div key={idx} className="text-center">
-                <div className="text-5xl font-extrabold text-primary mb-2">{stat.number}</div>
+                <div className="text-5xl font-extrabold text-primary mb-2">
+                  {stat.label === "Students Impacted" ? (
+                    <>
+                      <span className="block md:hidden">10k+</span>
+                      <span className="hidden md:block">{stat.number}</span>
+                    </>
+                  ) : (
+                    stat.number
+                  )}
+                </div>
                 <div className="text-base font-bold text-black dark:text-white">{stat.label}</div>
               </div>
             ))}
@@ -125,8 +134,9 @@ const SuccessStoriesPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {stories.map((story, index) => {
               const initials = `${story.name.split(" ")[0][0]}${story.name.split(" ")[1]?.[0] ?? ""}`;
+              const hiddenClass = index >= 4 ? "hidden md:block" : "";
               return (
-                <div key={index} className="rounded-2xl border border-stroke dark:border-strokedark bg-white dark:bg-black p-8 shadow-solid-2 flex flex-col hover:border-primary/50 hover:-translate-y-1 transition-all duration-300">
+                <div key={index} className={`rounded-2xl border border-stroke dark:border-strokedark bg-white dark:bg-black p-8 shadow-solid-2 flex flex-col hover:border-primary/50 hover:-translate-y-1 transition-all duration-300 ${hiddenClass}`}>
                   <div className="flex items-center gap-4 mb-4">
                     {/* TODO: Replace with the alumnus's real photo */}
                     <img

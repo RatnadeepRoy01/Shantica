@@ -51,9 +51,9 @@ const CTA = () => {
               whileInView="visible"
               transition={{ duration: 0.4, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_right lg:w-[45%]"
+              className="animate_right w-full lg:w-[45%]"
             >
-              <div className="flex items-center justify-end xl:justify-between">
+              <div className="flex items-center justify-center xl:justify-between">
                 <Image
                   width={299}
                   height={299}

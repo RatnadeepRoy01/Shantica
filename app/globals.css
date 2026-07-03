@@ -20,8 +20,18 @@
 }
 
 @layer base {
+  html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply relative z-1 font-inter text-regular font-normal text-waterloo dark:text-manatee;
+    @apply relative z-1 font-inter text-regular font-normal text-waterloo dark:text-manatee overflow-x-hidden;
+  }
+
+  img,
+  svg {
+    @apply max-w-full h-auto;
   }
 }
 

@@ -14,6 +14,11 @@ const Header = () => {
 
   const pathUrl = usePathname();
 
+  const closeNavigation = () => {
+    setNavigationOpen(false);
+    setDropdownToggler(false);
+  };
+
   // Sticky menu
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
@@ -25,7 +30,8 @@ const Header = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyMenu);
-  });
+    return () => window.removeEventListener("scroll", handleStickyMenu);
+  }, []);
 
   return (
     <header
@@ -97,9 +103,10 @@ const Header = () => {
 
         {/* Nav Menu Start   */}
         <div
-          className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
-            navigationOpen &&
-            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+          className={`invisible h-0 w-full items-center justify-between overflow-hidden transition-all duration-300 xl:visible xl:flex xl:h-auto xl:w-full ${
+            navigationOpen
+              ? "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+              : "max-h-0 xl:max-h-none"
           }`}
         >
           <nav>
@@ -129,7 +136,9 @@ const Header = () => {
                       >
                         {menuItem.submenu.map((item, key) => (
                           <li key={key} className="hover:text-primary">
-                            <Link href={item.path || "#"}>{item.title}</Link>
+                            <Link href={item.path || "#"} onClick={closeNavigation}>
+                              {item.title}
+                            </Link>
                           </li>
                         ))}
                       </ul>
@@ -137,6 +146,7 @@ const Header = () => {
                   ) : (
                     <Link
                       href={`${menuItem.path}`}
+                      onClick={closeNavigation}
                       className={
                         pathUrl === menuItem.path
                           ? "text-primary hover:text-primary"

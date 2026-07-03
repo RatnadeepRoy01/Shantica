@@ -10,14 +10,6 @@ export const metadata: Metadata = {
 };
 
 const AboutPage = () => {
-  const values = [
-    { icon: "🔥", title: "Radical Belief", description: "Every young person in Northeast India carries untapped potential. We exist to unlock it." },
-    { icon: "🤝", title: "Genuine Mentorship", description: "Our mentors don't just advise — they courier books, fly across continents, and call before job interviews." },
-    { icon: "🌍", title: "Global Access", description: "We bring mentors from Amsterdam, Dubai, London & the USA directly to students in tier-3 towns." },
-    { icon: "🎯", title: "Action Over Theory", description: "Street plays, mock interviews, live sales challenges — every module is built around doing." },
-    { icon: "💡", title: "Inclusive by Design", description: "Accessibly priced programs and free initiatives ensure no student is left behind." },
-    { icon: "📈", title: "Measurable Impact", description: "We track every participant's growth — from their first hesitant introduction to their final placement." },
-  ];
 
   const whyNE = [
     { stat: "~50%", label: "Youth Unemployment", desc: "Nearly half of NE India's educated youth remain unemployed — not from lack of talent, but lack of exposure." },
@@ -100,7 +92,7 @@ const AboutPage = () => {
               <p className="text-lg text-waterloo dark:text-manatee mb-6 leading-relaxed">
                 Former HR Leader at Genpact (11+ years, 15+ awards). Young India Fellow, Ashoka University. Left corporate life to build Shantica and give Northeast India's youth the mentor she wishes she had.
               </p>
-              <ul className="text-base text-waterloo dark:text-manatee space-y-2 list-disc pl-5">
+              <ul className="text-base text-waterloo dark:text-manatee space-y-2 list-disc pl-5 hidden md:block">
                 <li>200+ Career & Leadership Sessions conducted</li>
                 <li>100+ Global Volunteer Mentors built</li>
                 <li>Personally mentored by Sandeep Maheshwari</li>
@@ -119,7 +111,7 @@ const AboutPage = () => {
               <p className="text-lg text-waterloo dark:text-manatee mb-6 leading-relaxed">
                 10+ years in Learning & Development across Hospitality and F&B. IHM Guwahati graduate, certified Happiness Coach and Train-the-Trainer. Started by empowering rural youth in Assam under DDU-GKY.
               </p>
-              <ul className="text-base text-waterloo dark:text-manatee space-y-2 list-disc pl-5">
+              <ul className="text-base text-waterloo dark:text-manatee space-y-2 list-disc pl-5 hidden md:block">
                 <li>Leadership workshops for 2000+ individuals</li>
                 <li>Led CISF Leadership Sessions at Silchar Airport</li>
                 <li>DDU-GKY rural empowerment trainer</li>
@@ -177,7 +169,7 @@ const AboutPage = () => {
               href="/stories"
               className="inline-block rounded-full bg-primary px-10 py-4 text-lg font-semibold text-white hover:bg-primaryho transition-colors"
             >
-              Explore success Stories
+              Explore Stories
             </a>
             <a
               href="/contact"

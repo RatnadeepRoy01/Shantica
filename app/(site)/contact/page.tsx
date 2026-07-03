@@ -26,36 +26,52 @@ const ContactPage = () => {
 
       <Contact />
 
-      {/* Office Hours & Maps Section */}
       <section className="mt-12 px-4 md:px-8 xl:px-0">
-        <div className="mx-auto max-w-c-1016 border border-stroke dark:border-strokedark rounded-2xl bg-alabaster dark:bg-blacksection p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-solid-2">
-          <div>
-            <h3 className="text-base font-bold text-black dark:text-white mb-2">🕒 Office Working Hours</h3>
-            <p className="text-sm text-waterloo dark:text-manatee">10:00 AM - 05:00 PM (Monday - Saturday)</p>
-          </div>
-          <div className="text-center md:text-right">
-            <h3 className="text-base font-bold text-black dark:text-white mb-2">📍 Find Us on Google Maps</h3>
-            <a
-              href="https://maps.app.goo.gl/iLoB7XyYtR9hkWcC7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-primary hover:underline font-semibold"
-            >
-              Open Google Maps Location
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="fill-primary"
-              >
-                <path d="M10.4767 6.16664L6.00668 1.69664L7.18501 0.518311L13.6667 6.99998L7.18501 13.4816L6.00668 12.3033L10.4767 7.83331H0.333344V6.16664H10.4767Z" />
-              </svg>
-            </a>
-          </div>
+  <div className="mx-auto max-w-c-1016">
+    <div className="border border-stroke dark:border-strokedark rounded-2xl bg-alabaster dark:bg-blacksection p-5 flex flex-col gap-3 shadow-solid-2">
+
+      {/* Hours row */}
+      <div className="flex items-start gap-3.5 pb-4 border-b border-stroke dark:border-strokedark">
+        <div className="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-900/30 flex items-center justify-center shrink-0">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-amber-600 dark:text-amber-400">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
         </div>
-      </section>
+        <div>
+          <p className="text-xs text-waterloo dark:text-manatee mb-1">Office working hours</p>
+          <p className="text-[15px] font-medium text-black dark:text-white">10:00 AM – 5:00 PM</p>
+          <p className="text-[13px] text-waterloo dark:text-manatee mt-0.5">Monday – Saturday</p>
+        </div>
+      </div>
+
+      {/* Location row */}
+      <div className="flex items-start gap-3.5">
+        <div className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center shrink-0">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-blue-600 dark:text-blue-400">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/>
+          </svg>
+        </div>
+        <div>
+          <p className="text-xs text-waterloo dark:text-manatee mb-1">Find us</p>
+          <p className="text-[15px] font-medium text-black dark:text-white mb-2.5">Google Maps location</p>
+          <a
+            href="https://maps.app.goo.gl/iLoB7XyYtR9hkWcC7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-[13px] font-medium text-primary bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 px-3 py-1.5 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+            </svg>
+            Open in Maps
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
     </div>
   );
 };
