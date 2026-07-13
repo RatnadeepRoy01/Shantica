@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 import HeroSection from "../imageCollage/imageCollage";
+import HeroSection2 from "../imagecollege2/imagecollege2";
 import HeroAboutSection from "../AboutHero/aboutHero";
+import HeroAboutSection2 from "../AboutHero2/AboutHero2";
 
 type AboutVariant = "hero" | "about";
 
@@ -37,14 +38,14 @@ const CONTENT = {
     },
     sectionTwo: {
       heading: "Built for the",
-      headingHighlight: "Underdogs",
+      headingHighlight: "Backbenchers",
       highlightClass: "before:bg-titlebg2 dark:before:bg-titlebgdark",
       paragraph:
         "We exist for the backbenchers, the introverts, and the shy kids who were always too scared to speak up—to help them rebuild the self-belief that should have been there all along.",
       ctaLabel: "Read Our Story",
       ctaHref: "/about",
-      lightImage: "./images/about/about-light-02.svg",
-      darkImage: "./images/about/about-dark-02.svg",
+      lightImage: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2240.JPG.jpeg",
+      darkImage: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2240.JPG.jpeg",
     },
   },
 
@@ -87,12 +88,12 @@ const CONTENT = {
 // ── Component ─────────────────────────────────────────────────────────────────
 const About = ({ variant = "hero" }: AboutProps) => {
   const { sectionOne, sectionTwo } = CONTENT[variant];
-  const isHeroVariant = variant === "hero";
+  const isHeroVariant = variant === "hero";        
 
   return (
     <>
       {/* ===== Section One ===== */}
-      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
+      <section className="overflow-hidden pb-20 lg:pb-25 xl:pb-30 pt-20 md:pt-40">
         <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:gap-32.5">
 
@@ -209,19 +210,9 @@ const About = ({ variant = "hero" }: AboutProps) => {
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
               className="animate_right relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
-            >
-              <Image
-                src={sectionTwo.lightImage}
-                alt="About"
-                className="dark:hidden"
-                fill
-              />
-              <Image
-                src={sectionTwo.darkImage}
-                alt="About"
-                className="hidden dark:block"
-                fill
-              />
+            >  
+            {isHeroVariant ? <HeroSection2 /> : <HeroAboutSection2/>}
+
             </motion.div>
 
           </div>

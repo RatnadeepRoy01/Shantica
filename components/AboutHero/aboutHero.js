@@ -9,7 +9,7 @@ const HeroAboutSection = () => {
                     alt="About"
                     fill
                     className="rounded-2xl object-cover"
-                    src="/images/about/about-01.webp"
+                    src="https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-09%20at%209.04.47%20PM.jpeg"
                 />
             </div>
 
@@ -18,7 +18,7 @@ const HeroAboutSection = () => {
                     alt="About"
                     fill
                     className="rounded-2xl object-cover"
-                    src="/images/about/about-02.webp"
+                    src="https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2228.JPG.jpeg"
                 />
             </div>
 
@@ -27,7 +27,7 @@ const HeroAboutSection = () => {
                     alt="About"
                     fill
                     className="rounded-2xl object-cover"
-                    src="/images/about/about-03.webp"
+                    src="https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-09%20at%209.10.26%20PM%20(1).jpeg" 
                 />
             </div>
 
@@ -36,11 +36,11 @@ const HeroAboutSection = () => {
                     alt="About"
                     fill
                     className="rounded-2xl object-cover"
-                    src="/images/about/about-01.webp"
+                    src="https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2255.JPG.jpeg"
                 />
             </div>
-
-        </div>
+    
+        </div>  
     );
 };
 

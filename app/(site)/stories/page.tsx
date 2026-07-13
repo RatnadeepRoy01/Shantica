@@ -8,17 +8,28 @@ export const metadata: Metadata = {
 
 const SuccessStoriesPage = () => {
   const stories = [
-    { name: "Aparupa Banerjee", role: "Gandhi Fellow → ONGC Officer", tag: "Government & Fellowship", quote: "I had applied everywhere and got rejected. With constant guidance from Shantica, I cracked the Gandhi Fellowship and landed a job at ONGC. I can't express what Shantica has done for me." },
-    { name: "Chitradeep Bhowmik", role: "Offers at TCS, HDFC & TP", tag: "Multiple Offers", quote: "The trainers were so inspiring I joined their internship too! My mentor guided me for a year. I cracked 3 jobs — it was the best thing that happened to me." },
-    { name: "Prabhakaran Singha", role: "Finance Associate, Genpact Bangalore", tag: "Finance & Corporate", quote: "I spent 6 months building my communication and confidence with Sucharita Ma'am. I got a Finance job in Bangalore. This course changed my life!" },
-    { name: "Tanmoy Goswami", role: "Associate Manager, PwC Kolkata", tag: "Big 4 Placement", quote: "Tanmoy's dedication helped him land a role at PwC Kolkata. His journey reflects the power of clarity, preparation, and perseverance." },
-    { name: "Sripali Deb", role: "Young India Fellow, Ashoka University", tag: "Prestigious Fellowship", quote: "Sripali was selected for the prestigious Young India Fellowship at Ashoka University — a programme known for nurturing future leaders and changemakers." },
-    { name: "Supradeep Dey", role: "Praxis Business School & International Intern", tag: "MBA & International", quote: "Supradeep was selected for an international internship at Ask Arun Academy and admitted to the MBA programme at Praxis Business School, Kolkata." },
-    { name: "Anupama Dhar", role: "PR Intern, Qube Communication", tag: "Communications & PR", quote: "Anupama secured a PR Internship at Qube Communication — a testament to the impact of confidence-building and effective communication skills." },
-    { name: "Anusuya Kahar", role: "MBA Student, Assam University", tag: "Higher Education", quote: "With focused guidance and determination, Anusuya earned her seat in the MBA programme at Assam University." },
-    { name: "Lingthoibi Singha", role: "MBA Student, Assam University", tag: "Higher Education", quote: "Lingthoibi's admission to Assam University's MBA programme marks a confident step forward — built on hard work and the willingness to grow." },
+    { name: "Aparupa Banerjee", role: "Gandhi Fellow → ONGC Officer", image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/CEB4AEBE-ADF0-42E0-BAA6-678AC793D4DD.JPG%20(1).jpeg", tag: "Government & Fellowship", quote: "I had applied everywhere and got rejected. With constant guidance from Shantica, I cracked the Gandhi Fellowship and landed a job at ONGC. I can't express what Shantica has done for me." },
+    { name: "Chitradeep Bhowmik", role: "Offers at TCS, HDFC & TP", image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_20260312_022542.jpg.jpeg", tag: "Multiple Offers", quote: "The trainers were so inspiring I joined their internship too! My mentor guided me for a year. I cracked 3 jobs — it was the best thing that happened to me." },
+    { name: "Prabhakaran Singha", role: "Finance Associate, Genpact Bangalore", image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-09%20at%2010.29.36%20PM.jpeg", tag: "Finance & Corporate", quote: "I spent 6 months building my communication and confidence with Sucharita Ma'am. I got a Finance job in Bangalore. This course changed my life!" },
+    { name: "Tanmoy Goswami", role: "Associate Manager, PwC Kolkata", image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG-20260419-WA0005.jpg.jpeg", tag: "Big 4 Placement", quote: "Tanmoy's dedication helped him land a role at PwC Kolkata. His journey reflects the power of clarity, preparation, and perseverance." },
+    { name: "Sripali Deb", role: "Young India Fellow, Ashoka University", image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-09%20at%208.53.08%20PM.jpeg", tag: "Prestigious Fellowship", quote: "Sripali was selected for the prestigious Young India Fellowship at Ashoka University — a programme known for nurturing future leaders and changemakers." },
+    { name: "Supradeep Dey", role: "Praxis Business School & International Intern",image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%201.10.04%20PM.jpeg", tag: "MBA & International", quote: "Supradeep was selected for an international internship at Ask Arun Academy and admitted to the MBA programme at Praxis Business School, Kolkata." },
+    { 
+      name : "Anusuya Kahar", 
+      role: "Management Trainee, Gyanbarry", 
+      image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2064.JPG.jpeg",
+      tag: "Career Advancement", 
+      quote: "With focused guidance and determination, Anusuya earned her position as an Applicant Management Trainee at Gyanbarry, Dubai." 
+    },
+    { 
+     name: "Lingthoibi Singha", 
+     role: "KRG Unit Sales Manager, ICICI Lombard", 
+     image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-09%20at%2010.38.32%20PM.jpeg",
+     tag: "Sales & Corporate", 
+     quote: "Lingthoibi secured her role as KRG Unit Sales Manager at ICICI Lombard through strategic preparation and professional excellence" 
+    }
   ];
-
+      
   const speakers = [
     { name: "Debadutta Deb", role: "Lead, Amazon (IIM Bangalore)" },
     { name: "Jayasmita Dutta", role: "AVP, Accenture" },
@@ -41,31 +52,41 @@ const SuccessStoriesPage = () => {
     "Finance & Corporate": "bg-purple-50 text-purple-600 dark:bg-purple-900/20 dark:text-purple-400",
     "Big 4 Placement": "bg-orange-50 text-orange-600 dark:bg-orange-900/20 dark:text-orange-400",
     "Prestigious Fellowship": "bg-pink-50 text-pink-600 dark:bg-pink-900/20 dark:text-pink-400",
-    "MBA & International": "bg-cyan-50 text-cyan-600 dark:bg-cyan-900/20 dark:text-cyan-400",
+    "Career Advancement": "bg-cyan-50 text-cyan-600 dark:bg-cyan-900/20 dark:text-cyan-400",
     "Communications & PR": "bg-rose-50 text-rose-600 dark:bg-rose-900/20 dark:text-rose-400",
-    "Higher Education": "bg-indigo-50 text-indigo-600 dark:bg-indigo-900/20 dark:text-indigo-400",
+    "Sales & Corporate": "bg-indigo-50 text-indigo-600 dark:bg-indigo-900/20 dark:text-indigo-400",
   };
 
-  const placements = ["Genpact", "TCS", "PwC", "ONGC", "Accenture", "HDFC Bank", "Qube Communication", "Praxis Business School", "Ashoka University", "Assam University", "Ask Arun Academy", "Teleperformance"];
+const placements = [
+  { image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%201.15.13%20PM%20(2).jpeg", name: "Genpact" },
+  { image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%201.17.38%20PM.jpeg", name: "TCS" },
+  { image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%201.15.13%20PM%20(1).jpeg", name: "PwC" },
+  { image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%201.18.32%20PM.jpeg", name: "ONGC" },
+  { image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/OIP.jpeg", name: "Accenture" },
+  { image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%201.19.17%20PM.jpeg", name: "HDFC Bank" },
+  { image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%201.20.16%20PM.jpeg", name: "Qube Communication" },
+  { image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%201.15.13%20PM.jpeg", name: "Praxis Business School" },
+  { image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%201.20.17%20PM.jpeg", name: "Ashoka University" },
+  { image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%201.15.12%20PM.jpeg", name: "Assam University" },
+  { image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%201.20.17%20PM.jpeg", name: "Ask Arun Academy" },
+  { image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%201.21.30%20PM.jpeg", name: "Teleperformance" },
+];
 
   const featured = [
     {
       name: "Chitradeep Bhowmik",
       quote: "Shantica builds you from the inside out. It's not coaching — it's a transformation.",
-      // TODO: Replace with Chitradeep's real photo
-      image: "https://placehold.co/300x300/FDEBD3/1a1a1a?text=CB",
+      image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_20260312_022542.jpg.jpeg",
     },
     {
       name: "Prabhakaran Singha",
       quote: "I came in shy and lost. I walked out with a job in Bangalore and confidence to grab every opportunity.",
-      // TODO: Replace with Prabhakaran's real photo
-      image: "https://placehold.co/300x300/EFF3FF/1a1a1a?text=PS",
+      image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-09%20at%2010.29.36%20PM.jpeg",
     },
     {
       name: "Aparupa Banerjee",
       quote: "My mentor stood by me at my lowest and celebrated with me when I cracked it.",
-      // TODO: Replace with Aparupa's real photo
-      image: "https://placehold.co/300x300/FDEBD3/1a1a1a?text=AB",
+      image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/CEB4AEBE-ADF0-42E0-BAA6-678AC793D4DD.JPG%20(1).jpeg",
     },
   ];
 
@@ -90,7 +111,7 @@ const SuccessStoriesPage = () => {
             <div className="lg:col-span-5">
               {/* TODO: Replace with a real graduation / cohort celebration photo */}
               <img
-                src="https://placehold.co/720x560/FDEBD3/1a1a1a?text=Shantica+Alumni"
+                src="https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2251.JPG.jpeg?updatedAt=1783432450483"
                 alt="Shantica Leadership Academy alumni celebrating"
                 className="w-full h-auto rounded-3xl border border-stroke dark:border-strokedark shadow-solid-3 object-cover"
               />
@@ -133,14 +154,13 @@ const SuccessStoriesPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {stories.map((story, index) => {
-              const initials = `${story.name.split(" ")[0][0]}${story.name.split(" ")[1]?.[0] ?? ""}`;
               const hiddenClass = index >= 4 ? "hidden md:block" : "";
               return (
                 <div key={index} className={`rounded-2xl border border-stroke dark:border-strokedark bg-white dark:bg-black p-8 shadow-solid-2 flex flex-col hover:border-primary/50 hover:-translate-y-1 transition-all duration-300 ${hiddenClass}`}>
                   <div className="flex items-center gap-4 mb-4">
                     {/* TODO: Replace with the alumnus's real photo */}
                     <img
-                      src={`https://placehold.co/112x112/FDEBD3/1a1a1a?text=${initials}`}
+                      src={story.image}
                       alt={story.name}
                       className="h-14 w-14 rounded-full object-cover shrink-0"
                     />
@@ -233,11 +253,11 @@ const SuccessStoriesPage = () => {
               <div key={idx} className="flex flex-col items-center justify-center gap-2 rounded-xl border border-stroke dark:border-strokedark bg-white dark:bg-black p-4 text-center shadow-solid-2 hover:border-primary/40 transition-colors">
                 {/* TODO: Replace with the organisation's real logo */}
                 <img
-                  src={`https://placehold.co/120x60/EFF3FF/1a1a1a?text=${encodeURIComponent(org)}`}
-                  alt={`${org} logo`}
+                  src={org.image}
+                  alt={`${org.name} logo`}
                   className="h-8 w-auto object-contain"
                 />
-                <span className="text-sm font-semibold text-black dark:text-white">{org}</span>
+                <span className="text-sm font-semibold text-black dark:text-white">{org.name}</span>
               </div>
             ))}
           </div>

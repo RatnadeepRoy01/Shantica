@@ -3,11 +3,10 @@ import Hero from "@/components/Hero";
 import Brands from "@/components/Brands";
 import Feature from "@/components/Features";
 import About from "@/components/About";
-import FeaturesTab from "@/components/FeaturesTab";
 import FunFact from "@/components/FunFact";
 import CTA from "@/components/CTA";
 import FAQ from "@/components/FAQ";
-import Testimonial from "@/components/Testimonial";
+import SpeakerPhotoGrid from "./mentors";
 
 export const metadata: Metadata = {
   title: "Shantica Leadership Academy - Empowering Growth & Leadership",
@@ -16,17 +15,16 @@ export const metadata: Metadata = {
 
 
 export default function Home() {
-  return (
+  return (    
     <main>
       <Hero />
-      <Brands />
-      <Feature />
-      <About />
-      <FeaturesTab />
       <FunFact />
+      <Brands />    
+      <About />
+      <Feature />
+      <SpeakerPhotoGrid />
       <CTA />
       <FAQ />
-      <Testimonial />
       </main>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
+import Image from "next/image";
 import { Metadata } from "next";
 import About from "@/components/About";
-import OurJourney from "@/components/ourJourney/ourJouney";
 import Feature from "@/components/Features";
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ const AboutPage = () => {
       <About variant="about" />
 
       {/* Why NE India */}
-      <section className="mt-24 px-4 md:px-8 xl:px-0">
+      <section className="mb-20 px-4 md:px-8 xl:px-0">
         <div className="mx-auto max-w-c-1235">
           <div className="text-center mb-14">
             <h2 className="text-4xl font-bold text-black dark:text-white mb-4">The Opportunity Gap</h2>
@@ -61,13 +61,11 @@ const AboutPage = () => {
       </section>
 
       {/* Core Values */}
-      <section className="mt-24 bg-alabaster dark:bg-blacksection py-20 px-4 md:px-8 xl:px-0">
+      <section className=" bg-alabaster dark:bg-blacksection py-0 px-4 md:px-8 xl:px-0">
         <div className="mx-auto max-w-c-1235">
           <Feature variant="about" />
         </div>
       </section>
-
-      <OurJourney />
 
       {/* Founders */}
       <section className="mt-24 px-4 md:px-8 xl:px-0">
@@ -83,7 +81,14 @@ const AboutPage = () => {
             {/* Sucharita */}
             <div className="rounded-2xl border border-stroke dark:border-strokedark bg-white dark:bg-black p-10 shadow-solid-3 hover:border-primary/50 transition-colors duration-300">
               <div className="flex items-center gap-5 mb-6">
-                <div className="h-20 w-20 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-3xl uppercase select-none">SD</div>
+                <div className="relative h-20 w-20 rounded-full overflow-hidden border border-primary/20">
+                  <Image
+                    src="https://ik.imagekit.io/ptcg0bvf3/Shantica/Professional%20photo.JPG.jpeg"
+                    alt="Sucharita Dhar"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div>
                   <h3 className="text-2xl font-bold text-black dark:text-white">Sucharita Dhar</h3>
                   <p className="text-base font-medium text-primary uppercase tracking-wider">Founder & CEO</p>
@@ -102,7 +107,14 @@ const AboutPage = () => {
             {/* Tapashree */}
             <div className="rounded-2xl border border-stroke dark:border-strokedark bg-white dark:bg-black p-10 shadow-solid-3 hover:border-secondary/50 transition-colors duration-300">
               <div className="flex items-center gap-5 mb-6">
-                <div className="h-20 w-20 rounded-full bg-secondary/20 flex items-center justify-center text-secondary font-bold text-3xl uppercase select-none">TD</div>
+                <div className="relative h-20 w-20 rounded-full overflow-hidden border border-secondary/20">
+                  <Image
+                    src="https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2032.JPG.jpeg?updatedAt=1783432435273"
+                    alt="Tapashree Deb"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div>
                   <h3 className="text-2xl font-bold text-black dark:text-white">Tapashree Deb</h3>
                   <p className="text-base font-medium text-secondary uppercase tracking-wider">Co-Founder & L&D Director</p>
@@ -130,28 +142,47 @@ const AboutPage = () => {
             <p className="text-xl text-waterloo dark:text-manatee md:w-1/2 mx-auto">
               Interactive workshops, street plays, global mentor sessions, and a community that pushes you.
             </p>
-          </div>
+          </div>      
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { tag: "EXPERIENTIAL LEARNING", color: "text-primary", title: "Workshops & Bootcamps", desc: "Leadership activities and public-speaking exercises built to push comfort zones." },
-              { tag: "OUTDOOR EXPOSURE", color: "text-secondary", title: "Street Plays & Sales Challenges", desc: "Facing real crowds to build raw, unshakeable confidence." },
-              { tag: "GLOBAL NETWORK", color: "text-primary", title: "Weekly Mentor Sessions", desc: "Live sessions with coaches from Amsterdam, Bangalore, Dubai and beyond." },
-              { tag: "CAREER READINESS", color: "text-secondary", title: "Mock Interviews & Resume Labs", desc: "Hands-on resume reviews, LinkedIn audits, and industry mock rounds." },
-              { tag: "COMMUNITY", color: "text-primary", title: "Cohort Bonding", desc: "A close-knit group who push each other and celebrate every win together." },
-              { tag: "GUEST SESSIONS", color: "text-secondary", title: "Industry Masterclasses", desc: "Fireside conversations with leaders from IIT, IIM, and global MNCs." },
-            ].map((card, idx) => (
-              <div key={idx} className="overflow-hidden rounded-xl bg-alabaster dark:bg-blacksection p-8 flex flex-col justify-end aspect-[4/3] border border-stroke dark:border-strokedark hover:border-primary/50 transition-all">
-                <span className={`text-xs uppercase ${card.color} font-semibold tracking-wider mb-2`}>{card.tag}</span>
-                <h4 className="text-xl font-bold text-black dark:text-white mb-2">{card.title}</h4>
-                <p className="text-base text-waterloo dark:text-manatee">{card.desc}</p>
-              </div>
-            ))}
-          </div>
+  {[
+    { tag: "EXPERIENTIAL LEARNING", color: "text-primary", title: "Workshops & Bootcamps", desc: "Leadership activities and public-speaking exercises built to push comfort zones.", img: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-09%20at%209.04.46%20PM%20(1).jpeg" },
+    { tag: "OUTDOOR EXPOSURE", color: "text-secondary", title: "Street Plays & Sales Challenges", desc: "Facing real crowds to build raw, unshakeable confidence.", img: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2241.JPG.jpeg?updatedAt=1783432434231" },
+    { tag: "GLOBAL NETWORK", color: "text-primary", title: "Weekly Mentor Sessions", desc: "Live sessions with coaches from Amsterdam, Bangalore, Dubai and beyond.", img: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2248.JPG.jpeg?updatedAt=1783432432838" },
+    { tag: "CAREER READINESS", color: "text-secondary", title: "Mock Interviews & Resume Labs", desc: "Hands-on resume reviews, LinkedIn audits, and industry mock rounds.", img: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2228.JPG.jpeg?updatedAt=1783432432743" },
+    { tag: "COMMUNITY", color: "text-primary", title: "Cohort Bonding", desc: "A close-knit group who push each other and celebrate every win together.", img: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2236.JPG.jpeg?updatedAt=1783432444953" },
+    { tag: "GUEST SESSIONS", color: "text-secondary", title: "Industry Masterclasses", desc: "Fireside conversations with leaders from IIT, IIM, and global MNCs.", img: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-09%20at%209.04.42%20PM.jpeg" },
+  ].map((card, idx) => (
+    <div
+      key={idx}
+      className="group relative overflow-hidden rounded-xl p-8 flex flex-col justify-end aspect-[4/3] border border-stroke dark:border-strokedark hover:border-primary/50 transition-all"
+    >
+      {/* Background image */}
+      <img
+        src={card.img}
+        alt={card.title}
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+
+      {/* Dark overlay for text legibility */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
+
+      {/* Content sits above the overlay */}
+      <div className="relative z-10">
+        <span className={`text-xs uppercase ${card.color} font-semibold tracking-wider mb-2 block`}>
+          {card.tag}
+        </span>
+        <h4 className="text-xl font-bold text-white mb-2">{card.title}</h4>
+        <p className="text-base text-gray-200">{card.desc}</p>
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="mt-24 px-4 md:px-8 xl:px-0">
+     <section className="mt-24 px-4 md:px-8 xl:px-0">
         <div className="mx-auto max-w-c-1154 text-center rounded-3xl 
     bg-gradient-to-br from-indigo-50 to-blue-100 
     dark:bg-none dark:bg-[radial-gradient(ellipse_at_top,_#312e81,_#0f172a)]
@@ -185,9 +216,7 @@ const AboutPage = () => {
             </a>
           </div>
         </div>
-      </section>
-
-
+      </section>          
     </div>
   );
 };

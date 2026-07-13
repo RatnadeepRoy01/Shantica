@@ -1,57 +1,99 @@
+// import Image from "next/image";
+
+// const HeroSection = () => {
+//   return (
+//     <div className="animate_left relative hidden gap-8 md:flex md:w-full h-screen">
+
+//       <div className="flex flex-col justify-center items-center w-1/2 h-full">
+        
+//         <Image
+//           alt="About"
+//           width={600}
+//           height={900}
+//           className="rounded-2xl mb-8"
+//           src="https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2237.JPG.jpeg"
+//         />
+//         <Image
+//           alt="About"
+//           width={600}
+//           height={900}
+//           className="rounded-2xl mb-8"
+//           src="https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2241.JPG.jpeg"
+//         />
+//       </div>
+
+//       <div className="flex flex-col justify-center w-1/2 h-full">
+
+
+//         <Image
+//           alt="About"
+//           width={600}
+//           height={900}
+//           className="rounded-2xl mb-5 mt-7.5"
+//           src="https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2250.JPG.jpeg"
+//         />
+        
+//         <div className="relative w-full h-full">
+//         <Image
+//           alt="About"
+//           fill
+//           className="rounded-2xl object-cover"
+//           src="https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2255.JPG.jpeg"
+//         />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+  
+// export default HeroSection;           
+
 import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div className="animate_left relative hidden gap-8 md:flex md:w-full h-screen">
+    <div className="animate_left relative hidden md:flex gap-3 h-screen w-full">
 
-      <div className="flex flex-col justify-center items-center w-1/2 h-full">
-        <Image
-          alt="Shape"
-          width={72}
-          height={132}
-          className="absolute -left-5 top-5"
-          src="/images/shape/shape-05.svg"
-        />
-        <Image
-          alt="About"
-          width={600}
-          height={900}
-          className="mb-8"
-          src="/images/about/about-01.webp"
-        />
-        <Image
-          alt="About"
-          width={600}
-          height={900}
-          src="/images/about/about-02.webp"
-        />
+      {/* LEFT COLUMN — short + tall */}
+      <div className="flex flex-col gap-3 w-1/2 h-full">
+        <div className="relative w-full h-[35%]">
+          <Image
+            alt="About"
+            fill
+            className="rounded-2xl object-cover"
+            src="https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2237.JPG.jpeg"
+          />
+        </div>
+        <div className="relative w-full flex-1">
+          <Image
+            alt="About"
+            fill
+            className="rounded-2xl object-cover"
+            src="https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2241.JPG.jpeg"
+          />
+        </div>
       </div>
 
-      <div className="flex flex-col justify-center w-1/2 h-full">
-
-        <Image
-          alt="Shape"
-          width={40}
-          height={40}
-          src="/images/shape/shape-06.svg"
-          className=""
-        />
-
-        <Image
-          alt="About"
-          width={600}
-          height={900}
-          className="mb-5 mt-7.5"
-          src="/images/about/about-03.webp"
-        />
-        <Image
-          alt="Shape"
-          width={198}
-          height={198}
-          className="mx-auto"
-          src="/images/shape/shape-07.svg"
-        />
+      {/* RIGHT COLUMN — tall + short, offset downward */}
+      <div className="flex flex-col gap-3 w-1/2 h-full pt-10">
+        <div className="relative w-full flex-1">
+          <Image
+            alt="About"
+            fill
+            className="rounded-2xl object-cover"
+            src="https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2250.JPG.jpeg"
+          />
+        </div>
+        <div className="relative w-full h-[35%]">
+          <Image
+            alt="About"
+            fill
+            className="rounded-2xl object-cover"
+            src="https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2255.JPG.jpeg"
+          />
+        </div>
       </div>
+
     </div>
   );
 };

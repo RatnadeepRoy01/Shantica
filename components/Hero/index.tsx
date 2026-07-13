@@ -19,24 +19,22 @@ const Hero = () => {
                 </span>
               </h1>
               <p className="text-waterloo dark:text-manatee text-regular md:text-lg">
-                We bridge the gap between education and employability in Northeast India.
-                Through global mentorship, practical leadership training, and real-world exposure,
-                we help young minds build the confidence to succeed.
+                Shantica Leadership Academy empowers Northeast India’s youth by bridging the gap between education and employability through experiential learning, industry mentorship, and real-world leadership development.
               </p>
 
               <div className="mt-10">
                 <div className="flex flex-wrap gap-4">
                   <a
-                    href="/about"
+                    href="/contact"
                     className="flex items-center justify-center rounded-full bg-primary px-8 py-3 text-regular font-medium text-white duration-300 ease-in-out hover:bg-primaryho"
                   >
-                    About us
+                    Join us
                   </a>
                   <a
-                    href="/contact"
+                    href="/gallery"
                     className="flex items-center justify-center rounded-full border border-stroke px-8 py-3 text-regular font-medium text-black dark:text-white dark:border-strokedark duration-300 ease-in-out hover:bg- alabaster dark:hover:bg-hoverdark"
                   >
-                    Join as Mentor
+                    gallery
                   </a>
                 </div>
 
