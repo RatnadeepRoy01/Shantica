@@ -1,5 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
+import HoverImageCard from "@/components/HoverCard/HoverCard";
 
 export const metadata: Metadata = {
   title: "Success Stories | Shantica Leadership Academy",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 const SuccessStoriesPage = () => {
   const stories = [
     { name: "Aparupa Banerjee", role: "Gandhi Fellow → ONGC Officer", image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/CEB4AEBE-ADF0-42E0-BAA6-678AC793D4DD.JPG%20(1).jpeg", tag: "Government & Fellowship", quote: "I had applied everywhere and got rejected. With constant guidance from Shantica, I cracked the Gandhi Fellowship and landed a job at ONGC. I can't express what Shantica has done for me." },
-    { name: "Chitradeep Bhowmik", role: "Offers at TCS, HDFC & TP", image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_20260312_022542.jpg.jpeg", tag: "Multiple Offers", quote: "The trainers were so inspiring I joined their internship too! My mentor guided me for a year. I cracked 3 jobs — it was the best thing that happened to me." },
+    { name: "Chitradeep Bhowmik", role: "Offers at TCS, HDFC & TP", image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_20260312_022542.jpg.jpeg", tag: "Multiple Offers", quote: "The trainers were so inspiring I joined their internship too! My mentor guided me for a year. I cracked 3 jobs, it was the best thing that happened to me." },
     { name: "Prabhakaran Singha", role: "Finance Associate, Genpact Bangalore", image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-09%20at%2010.29.36%20PM.jpeg", tag: "Finance & Corporate", quote: "I spent 6 months building my communication and confidence with Sucharita Ma'am. I got a Finance job in Bangalore. This course changed my life!" },
     { name: "Tanmoy Goswami", role: "Associate Manager, PwC Kolkata", image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG-20260419-WA0005.jpg.jpeg", tag: "Big 4 Placement", quote: "Tanmoy's dedication helped him land a role at PwC Kolkata. His journey reflects the power of clarity, preparation, and perseverance." },
     { name: "Sripali Deb", role: "Young India Fellow, Ashoka University", image: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-09%20at%208.53.08%20PM.jpeg", tag: "Prestigious Fellowship", quote: "Sripali was selected for the prestigious Young India Fellowship at Ashoka University — a programme known for nurturing future leaders and changemakers." },
@@ -29,7 +30,49 @@ const SuccessStoriesPage = () => {
      quote: "Lingthoibi secured her role as KRG Unit Sales Manager at ICICI Lombard through strategic preparation and professional excellence" 
     }
   ];
-      
+
+  const items = [
+  {
+    src: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%209.08.52%20PM%20(2).jpeg",
+    alt: "Sripali Deb",
+    title: "Distinguished Voices",
+    description: "She commanded the stage as the anchor for a prestigious Lions International event, exemplifying the highest standards of public speaking.",
+  },
+  {
+    src: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%209.08.52%20PM%20(7).jpeg",
+    alt: "Rohit Paul Choudhury",
+    title: "Igniting Innovation",
+    description: "He expertly led the inaugural Barak Valley Startup Contest, driving the event with professional command.",
+  },
+  {
+    src: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%209.08.52%20PM%20(6).jpeg",
+    alt: "Prabhakaran Singha",
+    title: "Honoring Resilience",
+    description: "Prabhakaran leading the stage to honor 15+ NGOs that stood strong during the Assam Floods of 2022.",
+  },
+  {
+    src: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%209.08.52%20PM%20(1).jpeg",
+    alt: "Anusuya Kahar",
+    title: "Commended for Excellence",
+    description: "Recognized by the RPF for outstanding anchoring at the 75th Independence Day Celebration.",
+  },
+  {
+    src: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-14%20at%207.43.18%20PM.jpeg",
+    alt: "Supradeep Dey",
+    title: "Data-Driven Excellence",
+    description: "Supradeep Dey took the stage as host at his alma mater, Ramanuj Gupta Degree College, for Barak Valley’s premier Data Analytics Fest.",
+  },
+  {
+    src: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-14%20at%207.48.43%20PM.jpeg",
+    alt: "Parthiv Dey",
+    title: "Voices for Change",
+    description: "Parthiv Dey took the stage at Janata College as a speaker, leading a meaningful conversation on gender equality on Women’s Day.",
+  },
+
+
+];
+    
+          
   const speakers = [
     { name: "Debadutta Deb", role: "Lead, Amazon (IIM Bangalore)" },
     { name: "Jayasmita Dutta", role: "AVP, Accenture" },
@@ -45,7 +88,7 @@ const SuccessStoriesPage = () => {
     { number: "15+", label: "Industries Reached" },
     { number: "100+", label: "Global Mentors" },
   ];
-
+    
   const tagColors: Record<string, string> = {
     "Government & Fellowship": "bg-blue-50 text-blue-600 dark:bg-blue-900/20 dark:text-blue-400",
     "Multiple Offers": "bg-green-50 text-green-600 dark:bg-green-900/20 dark:text-green-400",
@@ -177,41 +220,26 @@ const placements = [
           </div>
         </div>
       </section>
-
-      {/* Featured Testimonials */}
-      <section className="mt-24 bg-alabaster dark:bg-blacksection py-16 px-4 md:px-8">
+      
+      {/* Gallery Section */}
+      <section className="mt-24 px-4 md:px-8 xl:px-0">
         <div className="mx-auto max-w-c-1154">
           <div className="text-center mb-14">
-            <h2 className="text-4xl font-bold text-black dark:text-white mb-4">In Their Own Words</h2>
+            <h2 className="text-4xl font-bold text-black dark:text-white mb-4">Our Stories in Pictures</h2>
             <p className="text-xl text-waterloo dark:text-manatee md:w-1/2 mx-auto">
-              Three voices. Three journeys. One recurring theme.
+              Moments that inspire and stories that motivate.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {featured.map((t, idx) => (
-              <div key={idx} className="rounded-2xl border border-stroke dark:border-strokedark bg-white dark:bg-black p-8 shadow-solid-2 relative">
-                <div className="text-6xl text-primary/20 font-serif absolute top-4 left-6 select-none">&ldquo;</div>
-                <div className="flex justify-center mb-6 pt-4">
-                  {/* TODO: Replace with the alumnus's real photo */}
-                  <img
-                    src={t.image}
-                    alt={t.name}
-                    className="h-20 w-20 rounded-full object-cover border-4 border-alabaster dark:border-blacksection shadow-solid-2"
-                  />
-                </div>
-                <p className="text-lg text-waterloo dark:text-manatee leading-relaxed italic mb-6 text-center">{t.quote}</p>
-                <div className="border-t border-stroke dark:border-strokedark pt-4 text-center">
-                  <span className="text-base font-bold text-black dark:text-white block">{t.name}</span>
-                  <span className="text-sm text-primary">Shantica Alumnus</span>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {items.map((item) => (
+              <HoverImageCard key={item.src} {...item} />
             ))}
           </div>
         </div>
       </section>
 
       {/* Sorting Hat Series */}
-      <section className="mt-24 bg-alabaster dark:bg-blacksection py-16 px-4 md:px-8">
+      <section className="mt-24 bg-alabaster dark:bg-blacksection py-16 px-4 md:px-8 bg-yellow-200">
         <div className="mx-auto max-w-c-1154">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-5">
@@ -255,7 +283,7 @@ const placements = [
                 <img
                   src={org.image}
                   alt={`${org.name} logo`}
-                  className="h-8 w-auto object-contain"
+                  className="h-20 w-auto object-contain"
                 />
                 <span className="text-sm font-semibold text-black dark:text-white">{org.name}</span>
               </div>

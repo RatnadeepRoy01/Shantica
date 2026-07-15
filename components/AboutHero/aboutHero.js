@@ -36,7 +36,7 @@ const HeroAboutSection = () => {
                     alt="About"
                     fill
                     className="rounded-2xl object-cover"
-                    src="https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2255.JPG.jpeg"
+                    src="https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-09%20at%209.04.20%20PM.jpeg?updatedAt=1783611599618"
                 />
             </div>
     

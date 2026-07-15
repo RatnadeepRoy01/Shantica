@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { Metadata } from "next";
 import About from "@/components/About";
-import Feature from "@/components/Features";
 
 export const metadata: Metadata = {
   title: "About Us | Shantica Leadership Academy",
@@ -57,13 +56,6 @@ const AboutPage = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Core Values */}
-      <section className=" bg-alabaster dark:bg-blacksection py-0 px-4 md:px-8 xl:px-0">
-        <div className="mx-auto max-w-c-1235">
-          <Feature variant="about" />
         </div>
       </section>
 
@@ -147,7 +139,7 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
   {[
     { tag: "EXPERIENTIAL LEARNING", color: "text-primary", title: "Workshops & Bootcamps", desc: "Leadership activities and public-speaking exercises built to push comfort zones.", img: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-09%20at%209.04.46%20PM%20(1).jpeg" },
-    { tag: "OUTDOOR EXPOSURE", color: "text-secondary", title: "Street Plays & Sales Challenges", desc: "Facing real crowds to build raw, unshakeable confidence.", img: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2241.JPG.jpeg?updatedAt=1783432434231" },
+    { tag: "OUTDOOR EXPOSURE", color: "text-secondary", title: "Street Plays & Sales Challenges", desc: "Facing real crowds to build raw, unshakeable confidence.", img: "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-13%20at%209.08.52%20PM.jpeg" },
     { tag: "GLOBAL NETWORK", color: "text-primary", title: "Weekly Mentor Sessions", desc: "Live sessions with coaches from Amsterdam, Bangalore, Dubai and beyond.", img: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2248.JPG.jpeg?updatedAt=1783432432838" },
     { tag: "CAREER READINESS", color: "text-secondary", title: "Mock Interviews & Resume Labs", desc: "Hands-on resume reviews, LinkedIn audits, and industry mock rounds.", img: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2228.JPG.jpeg?updatedAt=1783432432743" },
     { tag: "COMMUNITY", color: "text-primary", title: "Cohort Bonding", desc: "A close-knit group who push each other and celebrate every win together.", img: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2236.JPG.jpeg?updatedAt=1783432444953" },

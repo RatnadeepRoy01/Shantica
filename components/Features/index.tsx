@@ -24,13 +24,9 @@ const Feature = ({ variant = "hero" }: FeatureProps) => {
             headerInfo={{
               title: "SHANTICA LEADERSHIP ACADEMY",
               subtitle: "Empowering Future Leaders",
-              description: `Shantica Leadership Academy is dedicated to upskilling individuals with essential 
-    professional skills, leadership training, and career guidance to bridge the gap between education 
-    and industry expectations.`,
+              description: "Shantica Leadership Academy is dedicated to upskilling individuals with essential professional skills, leadership training, and career guidance to bridge the gap between education and industry expectations."
             }}
           />
-
-
           {/* <!-- Section Title End --> */}
 
           <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">

@@ -7,8 +7,21 @@ const FunFact = () => {
   return (
     <>
       {/* <!-- ===== Funfact Start ===== --> */}
-      <section className="px-4 py-20 md:px-8 lg:py-22.5 2xl:px-0">
+      <section className="px-4 py-20 md:px-8 lg:py-22.5 2xl:px-0 ">
         <div className="relative z-1 mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] py-22.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark xl:py-27.5">
+          {/* Background pattern (light/dark) */}
+          <Image
+            fill
+            src="/images/shape/shape-dotted-light-02.svg"
+            alt="Background pattern"
+            className="absolute inset-0 -z-1 object-cover opacity-20 dark:hidden"
+          />
+          <Image
+            fill
+            src="/images/shape/shape-dotted-dark-02.svg"
+            alt="Background pattern dark"
+            className="absolute inset-0 -z-1 hidden dark:block object-cover opacity-10"
+          />
           <Image
             width={132}
             height={132}
@@ -51,6 +64,7 @@ const FunFact = () => {
             <h2 className="mb-4 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
               Empowering Future Leaders with Shantica
             </h2>
+            
             <p className="mx-auto lg:w-11/12">
               Shantica Leadership Academy is dedicated to mentoring and
               upskilling individuals, providing world-class guidance, and
@@ -101,7 +115,7 @@ const FunFact = () => {
               className="animate_top text-center"
             >
               <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                120
+                120+
               </h3>
               <p className="text-lg font-medium text-waterloo dark:text-manatee">Global Mentors</p>
             </motion.div>
@@ -124,7 +138,7 @@ const FunFact = () => {
               className="animate_top text-center"
             >
               <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                200+
+                400+
               </h3>
               <p className="text-lg font-medium text-waterloo dark:text-manatee">Workshops Delivered</p>
             </motion.div>
@@ -147,9 +161,9 @@ const FunFact = () => {
               className="animate_top text-center"
             >
               <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                100+
+                90%
               </h3>
-              <p className="text-lg font-medium text-waterloo dark:text-manatee">Career Placements</p>
+              <p className="text-lg font-medium text-waterloo dark:text-manatee">Positive Reviews</p>
             </motion.div>
           </div>
         </div>

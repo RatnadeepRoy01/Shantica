@@ -42,17 +42,29 @@ const CONTENT = {
       highlightClass: "before:bg-titlebg2 dark:before:bg-titlebgdark",
       paragraph:
         "We exist for the backbenchers, the introverts, and the shy kids who were always too scared to speak up—to help them rebuild the self-belief that should have been there all along.",
-      ctaLabel: "Read Our Story",
-      ctaHref: "/about",
-      lightImage: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2240.JPG.jpeg",
-      darkImage: "https://ik.imagekit.io/ptcg0bvf3/Shantica/IMG_2240.JPG.jpeg",
+      items: [
+    {
+      number: "01",
+      title: "Safe Learning Space",
+      description:
+        "An environment designed for introverts to thrive without the pressure of traditional classrooms.",
     },
+    {
+      number: "02",
+      title: "Confidence Coaching",
+      description:
+        "Structured programs focused on overcoming imposter syndrome and building lasting self-belief.",
+    },
+  ],
+        ctaLabel: "Read Our Story",
+      ctaHref: "/about",
+        },
   },
 
   about: {
     sectionOne: {
       heading: "Our",
-      headingHighlight: "Mission",
+      headingHighlight: "Mission",    
       highlightClass: "before:bg-titlebg dark:before:bg-titlebgdark",
       paragraph:
         "We believe every young professional in Tier-2 and Tier-3 India deserves access to world-class mentorship, skills, and opportunities—regardless of where they grew up.",
@@ -77,12 +89,23 @@ const CONTENT = {
       highlightClass: "before:bg-titlebg2 dark:before:bg-titlebgdark",
       paragraph:
         "Every program, every mentor match, and every workshop is driven by one question: does this genuinely move the needle for someone who needs it most?",
-      ctaLabel: "Meet the Team",
-      ctaHref: "/team",
-      lightImage: "./images/about/about-light-02.svg",
-      darkImage: "./images/about/about-dark-02.svg",
+      items: [
+    {
+      number: "01",
+      title: "Impact-First Design",
+      description:
+        "Curriculum built by analyzing real-world skill gaps rather than just following trends.",
     },
-  },
+    {
+      number: "02",
+      title: "Community Driven",
+      description:
+        "A network of mentors and peers working together to lift the next generation of talent.",
+    }],
+        ctaLabel: "Meet the Team",
+      ctaHref: "/team",    
+    },
+  },     
 } satisfies Record<AboutVariant, (typeof CONTENT)["hero"]>;
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -124,7 +147,7 @@ const About = ({ variant = "hero" }: AboutProps) => {
               viewport={{ once: true }}
               className="animate_right md:w-1/2"
             >
-              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
+              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero font-serif italic">
                 {sectionOne.heading}{" "}
                 <span
                   className={`relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full ${sectionOne.highlightClass}`}
@@ -143,12 +166,12 @@ const About = ({ variant = "hero" }: AboutProps) => {
                     </p>
                   </div>
                   <div className="w-full sm:w-3/4">
-                    <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                    <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">    
                       {item.title}
                     </h3>
                     <p>{item.description}</p>
                   </div>
-                </div>
+                </div>    
               ))}
             </motion.div>
 
@@ -173,7 +196,7 @@ const About = ({ variant = "hero" }: AboutProps) => {
               viewport={{ once: true }}
               className="animate_left md:w-1/2"
             >
-              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
+              <h2 className="relative mb-6 font-serif italic text-3xl font-bold text-black dark:text-white xl:text-hero">
                 {sectionTwo.heading}{" "}
                 <span
                   className={`relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full ${sectionTwo.highlightClass}`}
@@ -183,6 +206,23 @@ const About = ({ variant = "hero" }: AboutProps) => {
               </h2>
 
               <p>{sectionTwo.paragraph}</p>
+
+              {sectionTwo.items.map((item) => (
+                <div key={item.number} className="mt-7.5 flex flex-col gap-4 sm:flex-row sm:items-center">
+                  <div className="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                    <p className="text-metatitle2 font-semibold text-black dark:text-white">
+                      {item.number}
+                    </p>
+                  </div>
+                  <div className="w-full sm:w-3/4">
+                    <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                      {item.title}
+                    </h3>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+              ))}
+
 
               <div>
                 <a
