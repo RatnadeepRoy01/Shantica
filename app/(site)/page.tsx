@@ -3,8 +3,6 @@ import Hero from "@/components/Hero";
 import Brands from "@/components/Brands";
 import Feature from "@/components/Features";
 import About from "@/components/About";
-import CTA from "@/components/CTA";
-import FAQ from "@/components/FAQ";
 import SpeakerPhotoGrid from "./mentors";
 import Achievements from "@/components/Achievements/achievements"
 import EventsSection from "@/components/Awards/Awards"
@@ -19,17 +17,19 @@ export default function Home() {
   return (    
     <main>
       <Hero />
-      <Brands />    
-      <About />
+      <Brands />
+      <div className="pt-20 md:pt-40">
+      <About />  
+      </div>      
       <Feature />
       <SpeakerPhotoGrid />
-      {/* <CTA />      */}
-      <EventsSection />
+      <EventsSection type="award"/>
       <Achievements />
-      <FAQ />
+      <EventsSection type="feedback"/>
       </main>
   );
 }
 
 
 
+    

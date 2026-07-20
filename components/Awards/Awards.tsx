@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowUpRight, Calendar } from "lucide-react";
-
-const events = [
+                        
+const award = [
   {
     image:
       "https://ik.imagekit.io/ptcg0bvf3/Shantica/WhatsApp%20Image%202026-07-15%20at%2010.46.27%20PM.jpeg",
@@ -43,6 +43,49 @@ const events = [
     date: "May 25 @ 11:00 am",
   },
 ];
+
+const feedback = [
+  {
+    image:
+      "https://ik.imagekit.io/ptcg0bvf3/Shantica/2_cropped.jpeg",
+    title: "Barak iconic Award For best Startup",
+    date: "July 14 @ 12:00 pm",
+  },
+  {
+    image:
+      "https://ik.imagekit.io/ptcg0bvf3/Shantica/1_cropped.jpeg",
+    title: "UNICEF Recognition Award For best Startup",
+    date: "July 7 @ 12:00 pm",
+  },
+  {    
+    image:
+      "https://ik.imagekit.io/ptcg0bvf3/Shantica/6_cropped.jpeg",
+    title:
+      "Recognized for distinguished service in flood response",
+    date: "May 25 @ 11:00 am",
+  },
+  {    
+    image:
+      "https://ik.imagekit.io/ptcg0bvf3/Shantica/4_cropped.jpeg",
+    title:
+      "Youth Leadership Excellence Award",
+    date: "May 25 @ 11:00 am",
+  },
+  {    
+    image:
+      "https://ik.imagekit.io/ptcg0bvf3/Shantica/5.jpeg",
+    title:
+      "Best Startup Award in Barak Valley",
+    date: "May 25 @ 11:00 am",
+  },
+  {    
+    image:
+      "https://ik.imagekit.io/ptcg0bvf3/Shantica/7_cropped.jpeg",
+    title:
+      "Recognition from Assam University",
+    date: "May 25 @ 11:00 am",
+  },
+]
      
 function EventCard({ event }) {
   return (
@@ -81,9 +124,35 @@ function EventCard({ event }) {
   );
 }
 
-export default function EventsSection() {
+function MessageCard({ event }) {
   return (
-    <section className="bg-yellow-50 py-20 sm:py-28">
+    <a
+      className="group flex flex-col"
+    >
+      <div className="relative overflow-hidden rounded-sm bg-stone-100 aspect-[4/5]">
+        <img
+          src={event.image}
+          alt={event.title}
+          loading="lazy"
+          className="h-full w-full object-fit transition-transform duration-700 ease-out group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      </div>
+    </a>
+  );
+}
+
+type EventsSectionProps = {
+  type: "award" | "feedback";
+};
+
+export default function EventsSection({ type }: EventsSectionProps) {
+  const isAward = type === "award";
+  const items = isAward ? award : feedback;
+  const heading = isAward ? "Awards" : "Feedback";
+
+  return (
+    <section className={isAward ? "bg-yellow-50 py-20 sm:py-28" : "bg-white py-20 sm:py-28"}>
       <div className="mx-auto max-w-6xl px-6">
         <div className="flex items-end justify-between border-b border-stone-200 pb-6">
           <div>
@@ -91,23 +160,27 @@ export default function EventsSection() {
               What's on
             </p>
             <h2 className="mt-2 font-serif text-4xl text-stone-900 font-serif italic sm:text-5xl">
-              Awards
+              {heading}
             </h2>
           </div>
           <a
             href="/gallery"
             className="hidden shrink-0 items-center gap-1.5 border-b border-stone-300 pb-1 text-sm font-medium text-stone-700 transition-colors hover:border-stone-900 hover:text-stone-900 sm:inline-flex"
           >
-            View all Awards
+            View all {heading}
             <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={1.75} />
-          </a>    
+          </a>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
-          {events.map((event) => (
-            <EventCard key={event.title} event={event} />
-          ))}
-        </div>        
+          {items.map((item) =>
+            isAward ? (
+              <EventCard key={item.title} event={item} />
+            ) : (
+              <MessageCard key={item.title} event={item} />
+            )
+          )}
+        </div>
 
         <div className="mt-12 flex justify-center sm:hidden">
           <a
@@ -122,3 +195,7 @@ export default function EventsSection() {
     </section>
   );
 }
+
+
+
+    

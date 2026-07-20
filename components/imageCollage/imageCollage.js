@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div className="animate_left relative hidden md:flex gap-3 h-screen w-full">
+    <div className="animate_left relative flex gap-2 h-[420px] w-full sm:h-[500px] md:h-screen md:gap-3">
 
       {/* LEFT COLUMN — short + tall */}
-      <div className="flex flex-col gap-3 w-1/2 h-full">
+      <div className="flex flex-col gap-2 w-1/2 h-full md:gap-3">
         <div className="relative w-full h-[35%]">
           <Image
             alt="About"
@@ -25,7 +25,7 @@ const HeroSection = () => {
       </div>
 
       {/* RIGHT COLUMN — tall + short, offset downward */}
-      <div className="flex flex-col gap-3 w-1/2 h-full pt-10">
+      <div className="flex flex-col gap-2 w-1/2 h-full pt-5 md:gap-3 md:pt-10">
         <div className="relative w-full flex-1">
           <Image
             alt="About"

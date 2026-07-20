@@ -1,6 +1,8 @@
 import React from "react";
 import { Metadata } from "next";
 import HoverImageCard from "@/components/HoverCard/HoverCard";
+import CareerPromiseSection from "@/components/PreviewCta/PreviewCta";
+import FacultyResearchSection from "@/components/Message/Message";
 
 export const metadata: Metadata = {
   title: "Success Stories | Shantica Leadership Academy",
@@ -222,7 +224,7 @@ const placements = [
       </section>
       
       {/* Gallery Section */}
-      <section className="mt-24 px-4 md:px-8 xl:px-0">
+      <section className="mt-24 px-4 md:px-8 xl:px-0 mb-24">
         <div className="mx-auto max-w-c-1154">
           <div className="text-center mb-14">
             <h2 className="text-4xl font-bold text-black dark:text-white mb-4">Our Stories in Pictures</h2>
@@ -237,36 +239,7 @@ const placements = [
           </div>
         </div>
       </section>
-
-      {/* Sorting Hat Series */}
-      <section className="mt-24 bg-alabaster dark:bg-blacksection py-16 px-4 md:px-8 bg-yellow-200">
-        <div className="mx-auto max-w-c-1154">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-5">
-              <span className="text-sm font-bold text-secondary uppercase tracking-widest block mb-3">SIGNATURE INITIATIVE</span>
-              <h2 className="text-4xl font-bold text-black dark:text-white mb-5">The Sorting Hat Series</h2>
-              <p className="text-xl text-waterloo dark:text-manatee leading-relaxed mb-6">
-                A free monthly live series on social media connecting regional youth with international industry experts — giving students in tier-3 towns a window into global careers.
-              </p>
-              <div className="p-5 rounded-xl border border-secondary/20 bg-secondary/10 text-base font-semibold text-black dark:text-white">
-                💡 10+ episodes completed, reaching thousands of youth in Silchar.
-              </div>
-            </div>
-            <div className="lg:col-span-7 bg-white dark:bg-black border border-stroke dark:border-strokedark rounded-2xl p-8 shadow-solid-3">
-              <h3 className="text-base font-bold text-black dark:text-white uppercase tracking-wider mb-5">Featured Speakers</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {speakers.map((s, idx) => (
-                  <div key={idx} className="p-4 rounded-lg bg-alabaster dark:bg-blacksection border border-stroke dark:border-strokedark">
-                    <span className="text-base font-bold text-black dark:text-white block">{s.name}</span>
-                    <span className="text-sm text-waterloo dark:text-manatee">{s.role}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+        <CareerPromiseSection />                
       {/* Placement Destinations */}
       <section className="mt-24 px-4 md:px-8 xl:px-0">
         <div className="mx-auto max-w-c-1154">
@@ -289,48 +262,23 @@ const placements = [
               </div>
             ))}
           </div>
-        </div>
+        </div>        
       </section>
-
-      {/* CTA */}
-      <section className="mt-24 px-4 md:px-8 xl:px-0">
-        <div className="mx-auto max-w-c-1154 text-center rounded-3xl 
-    bg-gradient-to-br from-indigo-50 to-blue-100 
-    dark:bg-none dark:bg-[radial-gradient(ellipse_at_top,_#312e81,_#0f172a)]
-    border border-indigo-200 dark:border-indigo-700/60
-    shadow-[0_4px_32px_rgba(99,102,241,0.10)] dark:shadow-[0_0_48px_rgba(99,102,241,0.18)]
-    p-14">
-          <h2 className="text-4xl font-bold text-black dark:text-white mb-5">
-            Ready to write your own story?
-          </h2>
-          <p className="text-xl text-waterloo dark:text-indigo-200 mb-10 md:w-2/3 mx-auto">
-            Our mentors are ready. Your seat in the next cohort is waiting.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/about"
-              className="inline-block rounded-full bg-primary px-10 py-4 text-lg font-semibold text-white hover:bg-primaryho transition-colors"
-            >
-              Explore About
-            </a>
-            <a
-              href="/contact"
-              className="inline-block rounded-full 
-          border border-indigo-300 dark:border-indigo-500/70 
-          px-10 py-4 text-lg font-semibold 
-          text-black dark:text-indigo-100 
-          hover:border-primary dark:hover:border-indigo-400 
-          hover:bg-indigo-50 dark:hover:bg-indigo-900/30
-          transition-colors"
-            >
-              Get in Touch
-            </a>
-          </div>
-        </div>
-      </section>
-
+        <FacultyResearchSection />
     </div>
   );
 };
 
-export default SuccessStoriesPage;
+export default SuccessStoriesPage;    
+    
+    
+    
+
+
+    
+
+    
+
+    
+
+    
